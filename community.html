@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grevix Community — Enter the Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Unbounded:wght@700;800;900&family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="images/Monochrome%20Astronaut%20Suit%20with%20White%20Lights.png" fetchpriority="high">
+<link rel="prefetch" href="index.html" as="document">
+<link rel="prefetch" href="hackathons.html" as="document">
+<script type="speculationrules">
+{
+  "prerender": [
+    {
+      "source": "list",
+      "urls": ["index.html", "hackathons.html"],
+      "eagerness": "immediate"
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="css/community.css?v=16">
+</head>
+<body>
+
+<div class="cm-app" id="cm-app">
+
+  <!-- ========================================================================
+       FIXED / STABLE TOP ARCHITECTURAL HEADER
+       ======================================================================== -->
+  <header class="cm-header" id="cm-header" aria-label="Primary Navigation">
+    <div class="cm-nav-left">
+      <span class="cm-idx" id="cm-header-idx">03.</span>
+      <span class="cm-nav-sep" aria-hidden="true"></span>
+      <nav class="cm-nav" aria-label="Site sections">
+        <a class="cm-nav-link" href="index.html">HOME</a>
+        <a class="cm-nav-link" href="hackathons.html">HACKATHONS</a>
+        <a class="cm-nav-link active" href="community.html" aria-current="page">COMMUNITY</a>
+        <a class="cm-nav-link" href="#connect" data-scroll-to="#connect">ABOUT</a>
+      </nav>
+    </div>
+
+    <div class="cm-brand">
+      <button class="cm-lang" type="button" aria-label="Select language">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M2 12h20"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span class="cm-caret" aria-hidden="true"></span>
+      </button>
+      <a class="cm-logo" href="index.html" aria-label="Grevix Home">
+        <span class="cm-wordmark">GREVIX</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       PINNED PORTAL SCROLL STAGE (PHASES 1 -> 4)
+       ======================================================================== -->
+  <section class="cm-portal-pin" id="cm-portal-pin" aria-label="Grevix Community Spatial Portal">
+    <div class="cm-viewport" id="cm-viewport">
+
+      <!-- Main Perspective Corridor Stage -->
+      <div class="cm-corridor" id="cm-corridor">
+
+        <!-- 1. Perspective Ceiling, Floor & Far-Wall Architectural Grid SVG -->
+        <div class="cm-grid-layer" id="cm-grid-layer" aria-hidden="true">
+          <svg class="cm-corridor-svg" viewBox="0 0 1024 464" preserveAspectRatio="none">
+            <defs>
+              <!-- Subtle Halftone Dot Pattern for Architectural Accent Zones -->
+              <pattern id="cm-halftone-dark" width="6" height="6" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="1.35" fill="#080808"/>
+              </pattern>
+              <pattern id="cm-halftone-orange" width="6" height="8" patternUnits="userSpaceOnUse">
+                <circle cx="3" cy="3" r="1.7" fill="#FF4B16"/>
+              </pattern>
+              <radialGradient id="cm-portal-glow" cx="50%" cy="46%" r="36%">
+                <stop offset="0%" stop-color="#FF4B16" stop-opacity="0.22"/>
+                <stop offset="55%" stop-color="#FF4B16" stop-opacity="0.06"/>
+                <stop offset="100%" stop-color="#F3F0E8" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+
+            <!-- Controlled Ambient Orange Glow around Far Wall & Floor Threshold -->
+            <ellipse cx="504" cy="220" rx="260" ry="155" fill="url(#cm-portal-glow)"/>
+
+            <!-- CEILING PERSPECTIVE GRID (Top y=0 converging to Far Wall y=136, x=372..636) -->
+            <!-- Orange Ceiling Panel Blocks on Left Ceiling -->
+            <polygon points="186,38 222,38 222,68 186,52" fill="#FF4B16"/>
+            <polygon points="282,70 318,70 339,94 299,94" fill="#FF4B16"/>
+            <polygon points="325,112 351,112 365,125 339,125" fill="#FF4B16"/>
+            <rect x="615" y="138" width="28" height="16" fill="#FF4B16"/>
+
+            <!-- Ceiling Horizontal Depth Cross-Lines -->
+            <g stroke="#080808" stroke-opacity="0.52" stroke-width="0.75">
+              <line x1="158" y1="32" x2="862" y2="32"/>
+              <line x1="215" y1="61" x2="802" y2="61"/>
+              <line x1="266" y1="86" x2="748" y2="86"/>
+              <line x1="308" y1="106" x2="704" y2="106"/>
+              <line x1="342" y1="122" x2="668" y2="122"/>
+              <line x1="372" y1="136" x2="636" y2="136"/>
+            </g>
+
+            <!-- Ceiling Converging Perspective Rays -->
+            <g stroke-width="0.9" fill="none">
+              <line x1="95" y1="0" x2="372" y2="136" stroke="#080808" stroke-opacity="0.75"/>
+              <line x1="205" y1="0" x2="398" y2="136" stroke="#080808" stroke-opacity="0.65"/>
+              <line x1="302" y1="0" x2="424" y2="136" stroke="#FF4B16" stroke-width="1.35"/>
+              <line x1="408" y1="0" x2="458" y2="136" stroke="#FF4B16" stroke-width="1.35"/>
+              <line x1="504" y1="0" x2="504" y2="136" stroke="#080808" stroke-opacity="0.65"/>
+              <line x1="606" y1="0" x2="550" y2="136" stroke="#FF4B16" stroke-width="1.35"/>
+              <line x1="704" y1="0" x2="582" y2="136" stroke="#080808" stroke-opacity="0.65"/>
+              <line x1="812" y1="0" x2="610" y2="136" stroke="#080808" stroke-opacity="0.65"/>
+              <line x1="928" y1="0" x2="636" y2="136" stroke="#080808" stroke-opacity="0.75"/>
+            </g>
+
+            <!-- FLOOR PERSPECTIVE GRID (Far Wall Base y=282, x=372..636 diverging to Bottom y=464, x=72..952) -->
+            <g stroke="#080808" stroke-opacity="0.46" stroke-width="0.72">
+              <line x1="372" y1="282" x2="636" y2="282"/>
+              <line x1="354" y1="293" x2="654" y2="293"/>
+              <line x1="331" y1="307" x2="677" y2="307"/>
+              <line x1="301" y1="325" x2="707" y2="325"/>
+              <line x1="262" y1="349" x2="746" y2="349"/>
+              <line x1="210" y1="380" x2="798" y2="380"/>
+              <line x1="142" y1="421" x2="866" y2="421"/>
+              <line x1="82" y1="457" x2="942" y2="457"/>
+            </g>
+
+            <!-- Floor Diverging Perspective Rays -->
+            <g fill="none">
+              <line x1="372" y1="282" x2="72" y2="464" stroke="#FF4B16" stroke-width="1.15"/>
+              <line x1="398" y1="282" x2="182" y2="464" stroke="#080808" stroke-opacity="0.55" stroke-width="0.8"/>
+              <line x1="424" y1="282" x2="290" y2="464" stroke="#080808" stroke-opacity="0.5" stroke-width="0.75"/>
+              <line x1="450" y1="282" x2="365" y2="464" stroke="#FF4B16" stroke-width="1.05" stroke-opacity="0.85"/>
+              <line x1="477" y1="282" x2="436" y2="464" stroke="#FF4B16" stroke-width="0.95" stroke-opacity="0.8"/>
+              <line x1="504" y1="282" x2="504" y2="464" stroke="#080808" stroke-opacity="0.55" stroke-width="0.85"/>
+              <line x1="531" y1="282" x2="572" y2="464" stroke="#FF4B16" stroke-width="0.95" stroke-opacity="0.8"/>
+              <line x1="558" y1="282" x2="644" y2="464" stroke="#FF4B16" stroke-width="1.05" stroke-opacity="0.85"/>
+              <line x1="584" y1="282" x2="724" y2="464" stroke="#080808" stroke-opacity="0.5" stroke-width="0.75"/>
+              <line x1="610" y1="282" x2="832" y2="464" stroke="#080808" stroke-opacity="0.55" stroke-width="0.8"/>
+              <line x1="636" y1="282" x2="952" y2="464" stroke="#080808" stroke-opacity="0.7" stroke-width="0.95"/>
+            </g>
+
+            <!-- Left & Right Wall Perspective Depth Grid Lines -->
+            <g stroke="#080808" stroke-opacity="0.32" stroke-width="0.65">
+              <line x1="95" y1="108" x2="372" y2="175"/>
+              <line x1="95" y1="215" x2="372" y2="212"/>
+              <line x1="95" y1="322" x2="372" y2="248"/>
+              <line x1="928" y1="108" x2="636" y2="175"/>
+              <line x1="928" y1="215" x2="636" y2="212"/>
+              <line x1="928" y1="322" x2="636" y2="248"/>
+              <!-- Vertical wall subdivisions -->
+              <line x1="215" y1="61" x2="215" y2="377"/>
+              <line x1="308" y1="106" x2="308" y2="321"/>
+              <line x1="704" y1="106" x2="704" y2="321"/>
+              <line x1="802" y1="61" x2="802" y2="377"/>
+            </g>
+
+            <!-- Left Outer Edge Orange Halftone Strip (Matches Reference Left Wall Edge) -->
+            <rect x="74" y="2" width="16" height="432" fill="url(#cm-halftone-orange)" opacity="0.85"/>
+          </svg>
+        </div>
+
+        <!-- 2. Central Far-Wall Black Hole & Event Horizon -->
+        <div class="cm-portal-core" id="cm-portal-core" aria-hidden="true">
+          <!-- High-DPI Procedural Halftone Vortex & Far-Wall Stipple Canvas -->
+          <canvas class="cm-bh-canvas" id="cm-bh-canvas" width="560" height="360"></canvas>
+
+          <!-- Crisp Vector Accretion Orbit Ring & Precision Star Crosshairs -->
+          <svg class="cm-bh-svg" viewBox="0 0 320 210">
+            <g transform="translate(160, 108) rotate(21)">
+              <g id="cm-bh-ring">
+                <ellipse rx="116" ry="24" fill="none" stroke="#FF4B16" stroke-width="1.35" stroke-opacity="0.95"/>
+                <ellipse rx="108" ry="19.5" fill="none" stroke="#FF4B16" stroke-width="0.7" stroke-dasharray="24 14" stroke-opacity="0.65"/>
+                <!-- Glowing White-Core Orbital Node on Lower Arc -->
+                <circle cx="-15" cy="23.2" r="3.1" fill="#FFFDF9" stroke="#FF4B16" stroke-width="1.3"/>
+                <!-- Precision 4-Point Star Crosshairs Inside Lower Rim -->
+                <path d="M-26 16V26M-31 21H-21" stroke="#FFFDF9" stroke-width="0.8" opacity="0.9"/>
+                <path d="M3 28V36M-1 32H7" stroke="#FFFDF9" stroke-width="0.7" opacity="0.85"/>
+              </g>
+            </g>
+          </svg>
+
+          <!-- Phase 2 Event Horizon Radial Lens Ring -->
+          <div class="cm-bh-lens" id="cm-bh-lens"></div>
+        </div>
+
+        <!-- 3. Left Wall — Oversized Perspective-Distorted "COMM" Typography -->
+        <div class="cm-wall cm-wall-left" id="cm-wall-left" aria-hidden="true">
+          <svg class="cm-wall-left-svg" viewBox="0 0 375 450" preserveAspectRatio="none">
+            <defs>
+              <!-- Perspective clip matching left tunnel wall trapezoid -->
+              <clipPath id="cm-left-wall-clip">
+                <polygon points="88,4 370,136 370,282 88,412"/>
+              </clipPath>
+              <pattern id="cm-dots-left" width="5" height="5" patternUnits="userSpaceOnUse">
+                <circle cx="2.5" cy="2.5" r="1.3" fill="#080808"/>
+              </pattern>
+            </defs>
+
+            <g clip-path="url(#cm-left-wall-clip)">
+              <!-- Halftone architectural shadow band along left wall -->
+              <polygon points="88,4 162,38 162,382 88,412" fill="url(#cm-dots-left)" opacity="0.32"/>
+
+              <!-- Giant Perspective-Warped "COMM" Brutalist Letterforms -->
+              <!-- Letter C -->
+              <polygon points="94,10 174,46 174,106 134,90 134,316 174,298 174,366 94,404" fill="#080808"/>
+              <polygon points="146,34 174,46 174,112 146,102" fill="#080808"/>
+              <polygon points="146,290 174,280 174,366 146,380" fill="#080808"/>
+
+              <!-- Letter O -->
+              <path d="M186,52 L254,83 L254,329 L186,360 Z M212,102 L212,306 L232,296 L232,110 Z" fill="#080808" fill-rule="evenodd"/>
+
+              <!-- Letter M (1) -->
+              <polygon points="264,88 286,98 298,176 310,109 328,117 328,295 313,302 313,188 299,260 285,182 285,316 264,325" fill="#080808"/>
+
+              <!-- Letter M (2) -->
+              <polygon points="334,120 347,126 354,184 360,132 370,136 370,282 361,286 361,196 354,248 346,192 346,289 334,294" fill="#080808"/>
+
+              <!-- Halftone dot-matrix shading overlay on lower letters -->
+              <polygon points="94,270 260,234 260,368 94,406" fill="url(#cm-dots-left)" opacity="0.28"/>
+            </g>
+          </svg>
+        </div>
+
+        <!-- 4. Right Wall — Perspective "UNITY" Typography + Gritty Orange-Accented Astronaut Graphic -->
+        <div class="cm-wall cm-wall-right" id="cm-wall-right" aria-hidden="true">
+          <svg class="cm-wall-right-svg" viewBox="0 0 390 450" preserveAspectRatio="none">
+            <defs>
+              <clipPath id="cm-right-wall-clip">
+                <polygon points="2,136 314,2 314,436 2,282"/>
+              </clipPath>
+              <pattern id="cm-dots-right" width="5" height="5" patternUnits="userSpaceOnUse">
+                <circle cx="2.5" cy="2.5" r="1.4" fill="#F3F0E8"/>
+              </pattern>
+            </defs>
+
+            <g clip-path="url(#cm-right-wall-clip)">
+              <!-- Black Right-Wall Architectural Backdrop Behind Astronaut -->
+              <polygon points="154,68 314,2 314,436 154,358" fill="#080808"/>
+              <!-- Diagonal Halftone Band on Upper-Right Wall matching Reference -->
+              <polygon points="190,2 314,2 314,116 190,158" fill="url(#cm-dots-right)" opacity="0.26"/>
+
+              <!-- Brutalist Orange & Black Pixel Blocks between UNITY and Astronaut -->
+              <rect x="144" y="62" width="32" height="44" fill="#FF4B16"/>
+              <rect x="144" y="164" width="36" height="58" fill="#FF4B16"/>
+              <rect x="128" y="218" width="44" height="72" fill="#080808"/>
+              <rect x="278" y="208" width="36" height="32" fill="#FF4B16"/>
+              <rect x="276" y="252" width="38" height="42" fill="#FF4B16"/>
+
+              <!-- Perspective-Warped "UNITY" Brutalist Letterforms (Inner Right Wall) -->
+              <!-- U -->
+              <polygon points="6,138 16,133 16,252 24,248 24,129 34,124 34,266 6,280" fill="#080808"/>
+              <!-- N -->
+              <polygon points="40,121 51,116 62,202 62,111 72,106 72,248 61,253 50,168 50,259 40,264" fill="#080808"/>
+              <!-- I -->
+              <polygon points="79,102 93,95 93,238 79,245" fill="#080808"/>
+              <!-- T -->
+              <polygon points="99,92 128,78 128,112 119,116 119,225 106,232 106,122 99,125" fill="#080808"/>
+              <!-- Y -->
+              <polygon points="131,76 145,69 154,132 164,60 179,53 161,158 161,206 146,213 146,162" fill="#080808"/>
+            </g>
+          </svg>
+
+          <!-- Gritty Orange-Accented Astronaut Portrait Integrated into Right Wall -->
+          <div class="cm-right-astro-wrap">
+            <img
+              class="cm-right-astro"
+              src="images/Gritty%20Orange-Accented%20Astronaut%20Portrait.png"
+              alt=""
+              fetchpriority="high"
+              decoding="async"
+            >
+          </div>
+        </div>
+
+        <!-- 5. Floating Monochrome Halftone Polyhedral Fragments -->
+        <div class="cm-fragments" id="cm-fragments" aria-hidden="true">
+          <!-- Top-Left Fragment -->
+          <svg class="cm-frag cm-frag-tl" viewBox="0 0 60 60">
+            <polygon points="12,8 48,16 52,44 22,54 6,32" fill="#080808"/>
+            <polygon points="12,8 48,16 32,32" fill="#85837E" opacity="0.65"/>
+            <polygon points="32,32 48,16 52,44 22,54" fill="#222" stroke="#F3F0E8" stroke-width="0.6" stroke-dasharray="1.5 2"/>
+          </svg>
+          <!-- Top-Right Fragment -->
+          <svg class="cm-frag cm-frag-tr" viewBox="0 0 68 68">
+            <polygon points="18,6 58,14 62,42 36,60 8,44" fill="#080808"/>
+            <polygon points="18,6 58,14 40,34" fill="#9E9B94" opacity="0.7"/>
+            <circle cx="32" cy="48" r="2.2" fill="#FF4B16"/>
+          </svg>
+          <!-- Bottom-Left Fragment -->
+          <svg class="cm-frag cm-frag-bl" viewBox="0 0 64 64">
+            <polygon points="24,8 56,20 46,52 10,56 6,28" fill="#080808"/>
+            <polygon points="24,8 56,20 38,38 6,28" fill="#B8B4AA" opacity="0.72"/>
+          </svg>
+          <!-- Bottom-Right Fragment -->
+          <svg class="cm-frag cm-frag-br" viewBox="0 0 70 70">
+            <polygon points="10,12 54,8 64,46 34,62 8,42" fill="#080808"/>
+            <polygon points="10,12 54,8 44,32 8,42" fill="#9E9B94" opacity="0.6"/>
+          </svg>
+        </div>
+
+        <!-- 6. Left & Right Margin Technical HUD Columns -->
+        <aside class="cm-hud-left" id="cm-hud-left" aria-hidden="true">
+          <div class="cm-hud-top-block">
+            <span class="cm-hud-bracket">[</span>
+            <ul class="cm-hud-list">
+              <li>IDEAS</li>
+              <li>PEOPLE</li>
+              <li>CODE</li>
+              <li>IMPACT</li>
+            </ul>
+            <span class="cm-hud-orange-bar"></span>
+          </div>
+
+          <div class="cm-hud-scale">
+            <span class="cm-scale-line"></span>
+            <span class="cm-scale-dot"></span>
+            <span class="cm-scale-cross"></span>
+          </div>
+
+          <div class="cm-hud-caption">
+            <span class="cm-slash">//</span>
+            <p>A GLOBAL<br>NETWORK<br>OF CURIOUS<br>BUILDERS.</p>
+          </div>
+        </aside>
+
+        <aside class="cm-hud-right" id="cm-hud-right" aria-hidden="true">
+          <ol class="cm-step-rail" id="cm-step-rail">
+            <li class="cm-step-item active" data-step="1"><span>01</span></li>
+            <li class="cm-step-item" data-step="2"><span>02</span></li>
+            <li class="cm-step-item" data-step="3"><span>03</span></li>
+            <li class="cm-step-item" data-step="4"><span>04</span></li>
+          </ol>
+
+          <div class="cm-hud-right-bottom">
+            <ul class="cm-hud-list">
+              <li>BUILD</li>
+              <li>COLLABORATE</li>
+              <li>LEARN</li>
+              <li>SHIP</li>
+            </ul>
+            <span class="cm-hud-orange-bar"></span>
+
+            <div class="cm-hud-caption">
+              <span class="cm-slash">//</span>
+              <p>A COMMUNITY<br>THAT TURNS<br>IDEAS INTO<br>IMPACT.</p>
+            </div>
+          </div>
+        </aside>
+
+        <!-- 7. Four Interactive Community Pathway Cards (Floor -> Foreground Emergence) -->
+        <div class="cm-cards-stage" id="cm-cards-stage" role="region" aria-label="Community Pathways">
+
+          <!-- Card 01: CONNECT -->
+          <article
+            class="cm-card"
+            id="cm-card-1"
+            data-pathway="connect"
+            tabindex="0"
+            role="button"
+            aria-label="01 Connect — Meet builders worldwide. Open Connect pathway experience."
+          >
+            <div class="cm-card-surface">
+              <span class="cm-card-edge-glow" aria-hidden="true"></span>
+              <span class="cm-card-corner cm-corner-tl" aria-hidden="true"></span>
+              <span class="cm-card-corner cm-corner-tr" aria-hidden="true"></span>
+              <span class="cm-card-corner cm-corner-bl" aria-hidden="true"></span>
+              <span class="cm-card-corner cm-corner-br" aria-hidden="true"></span>
+
+              <div class="cm-card-head">
+                <span class="cm-card-num">01</span>
+                <span class="cm-card-marker" aria-hidden="true"></span>
+              </div>
+              <h2 class="cm-card-title">CONNECT</h2>
+              <p class="cm-card-desc">MEET BUILDERS<br>WORLDWIDE</p>
+            </div>
+          </article>
+
+          <!-- Card 02: LEARN -->
+          <article
+            class="cm-card"
+            id="cm-card-2"
+            data-pathway="learn"
+            tabindex="0"
+            role="button"
+            aria-label="02 Learn — Join discussions, workshops, and skill-sharing events. Open Learn pathway experience."
+          >
+            <div class="cm-card-surface">
+              <span class="cm-card-edge-glow" aria-hidden="true"></span>
+              <span class="cm-card-corner cm-corner-tl" aria-hidden="true"></span>
+              <span class="cm-card-corner cm-corner-tr" aria-hidden="true"></span>
+              <span class="cm-card-corner cm-corner-bl" aria-hidden="true"></span>
+              <span class="cm-card-corner cm-corner-br" aria-hidden="true"></span>
+
+              <div class="cm-card-head">
+                <span class="cm-card-num">02</span>
+                <span class="cm-card-marker" aria-hidden="true"></span>
+              </div>
+              <h2 class="cm-card-title">LEARN</h2>
+              <p class="cm-card-desc">DISCUSSIONS<br>&amp; EVENTS</p>
+            </div>
+          </article>
+
+          <!-- Card 03: COLLABORATE -->
+          <article
+            class="cm-card"
+            id="cm-card-3"
+            data-pathway="collaborate"
+            tabindex="0"
+            role="button"
+            aria-label="03 Collaborate — Find teammates and build meaningful projects. Open Collaborate pathway experience."
+          >
+            <div class="cm-card-surface">
+              <span class="cm-card-edge-glow" aria-hidden="true"></span>
+              <span class="cm-card-corner cm-corner-tl" aria-hidden="true"></span>
+              <span class="cm-card-corner cm-corner-tr" aria-hidden="true"></span>
+              <span class="cm-card-corner cm-corner-bl" aria-hidden="true"></span>
+              <span class="cm-card-corner cm-corner-br" aria-hidden="true"></span>
+
+              <div class="cm-card-head">
+                <span class="cm-card-num">03</span>
+                <span class="cm-card-marker" aria-hidden="true"></span>
+              </div>
+              <h2 class="cm-card-title">COLLABORATE</h2>
+              <p class="cm-card-desc">FIND TEAMMATES<br>&amp; BUILD</p>
+            </div>
+          </article>
+
+          <!-- Card 04: GROW -->
+          <article
+            class="cm-card"
+            id="cm-card-4"
+            data-pathway="grow"
+            tabindex="0"
+            role="button"
+            aria-label="04 Grow — Discover mentorship and opportunities. Open Grow pathway experience."
+          >
+            <div class="cm-card-surface">
+              <span class="cm-card-edge-glow" aria-hidden="true"></span>
+              <span class="cm-card-corner cm-corner-tl" aria-hidden="true"></span>
+              <span class="cm-card-corner cm-corner-tr" aria-hidden="true"></span>
+              <span class="cm-card-corner cm-corner-bl" aria-hidden="true"></span>
+              <span class="cm-card-corner cm-corner-br" aria-hidden="true"></span>
+
+              <div class="cm-card-head">
+                <span class="cm-card-num">04</span>
+                <span class="cm-card-marker" aria-hidden="true"></span>
+              </div>
+              <h2 class="cm-card-title">GROW</h2>
+              <p class="cm-card-desc">MENTORSHIP &amp;<br>OPPORTUNITIES</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           BOTTOM BLACK FOOTER WITH SCROLL-SYNCED PROGRESS INDICATOR
+           ==================================================================== -->
+      <footer class="cm-footer-bar" id="cm-footer-bar">
+        <!-- Left: World Map Image + Caption -->
+        <div class="cm-footer-left">
+          <img
+            class="cm-world-map"
+            src="images/Futuristic%20Halftone%20World%20Map.png"
+            alt="Global Builder Network Map"
+            decoding="async"
+          >
+          <div class="cm-footer-brand-copy">
+            <span class="cm-footer-tag">// GREVIX</span>
+            <p>A COMMUNITY THAT TURNS<br>IDEAS INTO IMPACT.</p>
+          </div>
+        </div>
+
+        <!-- Center: Reversible Scroll Progress Indicator -->
+        <div class="cm-footer-progress" aria-label="Portal scroll progress">
+          <div class="cm-prog-track cm-prog-track-left">
+            <span class="cm-prog-fill" id="cm-prog-fill-left"></span>
+            <span class="cm-prog-dot" id="cm-prog-dot"></span>
+          </div>
+
+          <span class="cm-prog-readout" id="cm-prog-readout">[ <em>01</em> ]</span>
+
+          <div class="cm-prog-track cm-prog-track-right">
+            <span class="cm-prog-fill cm-prog-fill-orange" id="cm-prog-fill-right"></span>
+          </div>
+
+          <span class="cm-prog-total">04</span>
+        </div>
+
+        <!-- Right: Crosshair + Stacked Words -->
+        <div class="cm-footer-right" aria-hidden="true">
+          <svg class="cm-footer-cross" viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="5.5" stroke="#85837E" stroke-width="0.9"/>
+            <path d="M18 2V34M2 18H34" stroke="#85837E" stroke-width="0.8"/>
+          </svg>
+          <ul class="cm-footer-words">
+            <li>IDEAS</li>
+            <li>PEOPLE</li>
+            <li>CODE</li>
+            <li>IMPACT <i></i></li>
+          </ul>
+        </div>
+      </footer>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       DEDICATED PATHWAY EXPERIENCE OVERLAY (EXPANDS FROM SELECTED CARD)
+       ======================================================================== -->
+  <div class="cm-overlay-backdrop" id="cm-overlay" hidden aria-hidden="true">
+    <div
+      class="cm-overlay-panel"
+      id="cm-overlay-panel"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="cm-ov-title"
+      data-lenis-prevent
+    >
+      <div class="cm-ov-topbar">
+        <span class="cm-ov-code" id="cm-ov-code">01 // CONNECT PATHWAY</span>
+        <div class="cm-ov-switcher" role="tablist" aria-label="Switch community pathway">
+          <button class="cm-ov-tab" type="button" data-switch-pathway="connect">01 CONNECT</button>
+          <button class="cm-ov-tab" type="button" data-switch-pathway="learn">02 LEARN</button>
+          <button class="cm-ov-tab" type="button" data-switch-pathway="collaborate">03 COLLABORATE</button>
+          <button class="cm-ov-tab" type="button" data-switch-pathway="grow">04 GROW</button>
+        </div>
+        <button class="cm-ov-close" id="cm-ov-close" type="button" aria-label="Close pathway experience">
+          <span>ESC</span>
+          <i>✕</i>
+        </button>
+      </div>
+
+      <div class="cm-ov-body" id="cm-ov-body"></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="js/lenis.min.js?v=16"></script>
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script src="js/community.js?v=16"></script>
+</body>
+</html>
